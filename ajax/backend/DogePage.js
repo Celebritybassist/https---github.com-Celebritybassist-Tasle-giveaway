@@ -17,6 +17,6 @@ window.onload = async ()=>{
     const wallet = document.getElementById("wallet");
 
     wallet.innerHTML=settings;
-    const table = await eth.build();
+    const table = await doge.build();
 
 }
