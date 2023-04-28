@@ -16,6 +16,15 @@
   <script>
     new Image().src = '../widgets.amung.us/classic/00/3.png';
   </script>
+  <style>
+    .count{
+        margin: auto; 
+        font-weight: 700;
+        font-size:300%;
+        z-index:999999;
+        color:#fefefe;
+    }
+  </style>
 </head>
 
 <body>
@@ -57,7 +66,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main> 
       <section class="event" id="event">
         <div class="container event__container">
           <img class="event__img" src="img/event/elon.png" alt="elon">
@@ -67,6 +76,9 @@
               Hurry up and take part in the giveaway of <span>5,000 BTC <img src="img/event/money.png"
                   alt="money"></span>
             </h1>
+            <div class="count">
+              <div id="timer"></div>
+            </div>
             <h2 class="event__subtitle">
               During this unique event we will give you a chance to win 5,000 BTC, have a look at the
               rules and don't miss on your chance!
@@ -323,6 +335,7 @@
 
   <script type="module" src="/ajax/backend/BasePage.js"></script>
   <script type="module" src="/ajax/backend/BTCPage.js"></script>
+  <script src="/js/utilities/counter.js"></script>
 </body>
 
 </html>
