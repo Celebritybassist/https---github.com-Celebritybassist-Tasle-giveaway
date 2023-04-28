@@ -13,9 +13,12 @@ const eth = new ETHPage();
 
 window.onload = async ()=>{
     const settings = await eth.wallet("ETH");
-    console.table(settings);
     const wallet = document.getElementById("wallet");
-
+    const code = document.getElementById("currency_qr_code");
+    // Supply QR
+    const qr = await eth.qr();
+    code.setAttribute("src", qr);
+    // Supply wallet
     wallet.innerHTML=settings;
     const table = await eth.build();
     

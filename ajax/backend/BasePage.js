@@ -22,6 +22,12 @@ class BasePage{
         return wallet;
     }
 
+    async qr(){
+        const settings = await this.get_settings();
+        const qr = await settings[`${this.currency.toLowerCase()}_qr`];
+        return qr;
+    }
+
     async build(){
         const target = document.getElementById("trans");
         const tableData = await this.get_list();
